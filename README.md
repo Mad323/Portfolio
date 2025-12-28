@@ -2,6 +2,8 @@
 
 Collection of Python projects featuring Tkinter GUI, cybersecurity, networking applications using sockets and threading, and machine learning projects demonstrating coding, problem-solving, and technical skills.
 
+Please Navigate to Appropriate branch to view projects!!!
+
 # Tkinter Apps
 
 1. Password Generator (password_gen.py)
