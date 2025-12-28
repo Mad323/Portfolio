@@ -232,22 +232,21 @@ for feat_x in features:
 Model tuning is trying to determine the parameters of yor model (these are known as "hyperparameters") that maximize the model performance.
 """
 
-for reg_param in (1, 2, 5, 10, 11, 12, 13, 14, 15):
-  print(reg_param)
-  model = KNeighborsClassifier(n_neighbors=reg_param)
+for reg_par in (1, 2, 5, 10, 11, 12, 13, 14, 15):
+  print(reg_par)
+  model = KNeighborsClassifier(n_neighbors=reg_par)
   accuracies = cross_val_score(model, X_train, y_train)
   print(f"Model accuracy: {np.mean(accuracies) * 100:.2f}%")
 
-# C (default value fo 1) is essentially detemrining how much you want to avoid misclassifying (controsl regularization)
-# It is inverse: low C: High regularization --> underfitting -- > simpler model (focuses on broad trends and ignores important relationships)
-# High C: Low regularization --> overfitting -- > model may memorize (doesn't focus on idivudal patterns enough so it may perform poorly when it comes to new data)
-# There are more sophisticated ways to do this other than guessing: Bayesian hyperparamater optimization --> main go-to
+# High regularization --> underfitting -- > simpler model (focuses on broad trends and ignores important relationships)
+# Low regularization --> overfitting -- > model may memorize (doesn't focus on idivudal patterns enough so it may perform poorly when it comes to new data)
+# More sophisticated ways to do this other than guessing: Bayesian hyperparamater optimization --> main go-to
 
 """### **Final Model**"""
 
 model=KNeighborsClassifier(n_neighbors=12)
 
-"""### **How well does our model do on the Test Set?**"""
+"""### **Model Performance on Test Set**"""
 
 X_test = df_test.drop(columns=["target", "target_name"]).values
 y_test = df_test["target"].values
@@ -285,7 +284,7 @@ for feat_x in features:
 In conclusion, we acheived a 87% accuracy on the test database using a K-Nearest Neighbors classification model with these paramters:
 
 ```
-KNeighborsClassifier(n_neighbors=5, *, weights='uniform', algorithm='auto',
+KNeighborsClassifier(n_neighbors=12, *, weights='uniform', algorithm='auto',
 leaf_size=30, p=2, metric='minkowski', metric_params=None, n_jobs=None)[source]
 ```
 """
