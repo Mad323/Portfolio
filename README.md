@@ -1,6 +1,6 @@
 # Portfolio
 
-Collection of Python projects featuring Tkinter GUI, cybersecurity, and networking applications using sockets and threading, demonstrating coding, problem-solving, and technical skills.
+Collection of Python projects featuring Tkinter GUI, cybersecurity, networking applications using sockets and threading, and machine learning projects demonstrating coding, problem-solving, and technical skills.
 
 # Tkinter Apps
 
@@ -21,3 +21,7 @@ Collection of Python projects featuring Tkinter GUI, cybersecurity, and networki
 3. SSH Login Script (ssh_login.py)
    
 4. Vurnability Scanner (vurn_scan.py)
+
+# Machine Learning Apps/Scripts 
+
+1. Breast Cancer Dataset (breast_cancer_dataset.py)
