@@ -229,7 +229,7 @@ for feat_x in features:
 
 """### **Model Tuning**
 
-Model tuning is trying to determine the parameters of yor model (these are known as "hyperparameters") that maximize the model performance.
+Model tuning is trying to determine the parameters of your model (these are known as "hyperparameters") that maximize the model performance.
 """
 
 for reg_par in (1, 2, 5, 10, 11, 12, 13, 14, 15):
